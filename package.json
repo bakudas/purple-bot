@@ -1,0 +1,25 @@
+{
+  "name": "purple-bit",
+  "version": "1.0.0",
+  "description": "discord bot from vaca roxa studio",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bakudas@bitbucket.org/bakudas/purple-bit.git"
+  },
+  "keywords": [
+    "bot",
+    "discord",
+    "vaca",
+    "roxa"
+  ],
+  "author": "bakudas",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/bakudas/purple-bit#readme",
+  "dependencies": {
+    "discord.js": "^11.4.2"
+  }
+}
