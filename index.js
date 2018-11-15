@@ -95,6 +95,17 @@ client.on('message', message => {
         const attachment = new Attachment('https://cdn.discordapp.com/attachments/354250290729582592/476405563601977370/bangief2.gif');
         message.channel.send(attachment);
     }
+    else if (message.content == `${prefix}lel`) {
+        const attachment = new Attachment('https://media.discordapp.net/attachments/388154650597261323/512640299739381795/unknown.png');
+        message.channel.send(attachment);
+    }
+    else if (message.content == `${prefix}lul`) {
+        const attachment = new Attachment('https://media.discordapp.net/attachments/388154650597261323/512640335407480862/unknown.png');
+        message.channel.send(attachment);
+    }
+    else if (message.content == `${prefix}saidaquiseucachorro`) {
+        message.channel.send("https://youtu.be/MkRed9gokYM");
+    }
 });
 
 function getRandomInt(min, max) {
