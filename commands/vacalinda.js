@@ -2,7 +2,7 @@ const { Client, Attachment } = require('discord.js');
 
 module.exports = {
     name: 'vacalinda',
-    description: 'A vaca é muito carinhosa, mas as vezes vaidoza,
+    description: 'A vaca é muito carinhosa, mas as vezes vaidoza',
     execute(message, args) {
         if (randomMsg === 0) {
             // Create the attachment using Attachment
