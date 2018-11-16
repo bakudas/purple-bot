@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
     name: 'dandy',
-    description: 'Mostra um troço bonitinho',
+    description: 'Jogo Dandy & Randy, criado pelo Yin',
     execute(message, args) {
         // inside a command, event listener, etc.
         const exampleEmbed = new Discord.RichEmbed()
@@ -21,5 +21,3 @@ module.exports = {
         message.channel.send(exampleEmbed);
     },
 };
-
-let randomMsg = 0; // var para 'randomizar' as mensagens da vaca

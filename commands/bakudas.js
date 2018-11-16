@@ -1,6 +1,6 @@
 module.exports = {
     name: 'bakudas',
-    description: 'Manda um video de pixelart do bakudas',
+    description: 'Manda um video de pixelart do canal do Vaca',
     execute(message, args) {
         var rvideo = getRandomInt(0, videos.length-1);
         if (message.channel == null) {

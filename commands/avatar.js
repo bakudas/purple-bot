@@ -1,6 +1,6 @@
 module.exports = {
     name: 'avatar',
-    description: 'Mostra o avatar',
+    description: 'Mostra o avatar da @ citada, se não tiver @ mostra o próprio avatar',
     execute(message, args) {
         if (!message.mentions.users.size) {
             return message.channel.send(`Seu avi: ${message.author.displayAvatarURL}`);
