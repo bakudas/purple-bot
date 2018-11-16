@@ -12,13 +12,13 @@ module.exports = {
 
         if (!args.length) {
             data.push('Segue a lista de todos os meus comandos:');
-            data.push(commands.map(command => command.name).join('- '));
+            data.push(commands.map(command => command.name).join(' - '));
             data.push(`\nVocê pode usar \`${prefix}help [nome do comando]\` para ter mais infos sobre o comando em questão.`);
 
             return message.author.send(data, { split: true })
                 .then(() => {
                     if (message.channel.type === 'dm') return;
-                    message.reply('Mandei uma DM com todos os meus comandos disponíveis! (: ');
+                    message.reply('te mandei uma DM com todos os meus comandos disponíveis! (: ');
                 })
                 .catch(error => {
                     console.error(`Não foi possível mandar DM para ${message.author.tag}.\n`, error);
