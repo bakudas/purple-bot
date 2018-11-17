@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const { Client, Attachment } = require('discord.js');
 
-const client = new Discord.Client();
+const client = new Discord.Client({autoReconnect:true});
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
@@ -28,10 +28,10 @@ client.on('message', message => {
     const command = client.commands.get(commandName);
 
     if (command.args && !args.length) {
-        let reply = `You didn't provide any arguments, ${message.author}!`;
+        let reply = `Você deveria digitar algum parâmetro, ${message.author}!`;
 
         if (command.usage) {
-            reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
+            reply += `\nUso apropriado: \`${prefix}${command.name} ${command.usage}\``;
         }
         return message.channel.send(reply);
     }
@@ -45,8 +45,5 @@ client.on('message', message => {
     }
 });
 
-
-
-var cli = new Discord.Client({autoReconnect:true});
 // token login
 client.login(token);
