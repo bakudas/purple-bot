@@ -28,10 +28,10 @@ client.on('message', message => {
     const command = client.commands.get(commandName);
 
     if (command.args && !args.length) {
-        let reply = `Você deveria digitar algum parâmetro, ${message.author}!`;
+        let reply = `Parece que está faltando alguma coisa no comando, ${message.author}!`;
 
         if (command.usage) {
-            reply += `\nUso apropriado: \`${prefix}${command.name} ${command.usage}\``;
+            reply += `\nUso apropriado do comando: \`${prefix}${command.name} ${command.usage}\``;
         }
         return message.channel.send(reply);
     }

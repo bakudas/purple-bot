@@ -2,6 +2,7 @@ module.exports = {
     name: 'd',
     description: 'Comando para rolar o dado com o número de lados escolhidos. e.g !d 20',
     args: true,
+    usage: `numedo de lados`,
     execute(message, args) {
         let dice = {
             sides: args[0],
