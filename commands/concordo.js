@@ -4,7 +4,7 @@ module.exports = {
     name: 'concordo',
     description: 'gif concordo com o palestrinha do choque de cultura',
     execute(message, args) {
-        const attachment = new Attachment('https://media.discordapp.net/attachments/388154650597261323/512640299739381795/unknown.png');
+        const attachment = new Attachment('https://cdn.discordapp.com/attachments/334713917907402763/513743440731963443/tenor_3.gif');
         message.channel.send(attachment);
     },
 };
