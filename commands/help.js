@@ -1,4 +1,6 @@
 const { prefix } = require('../config.json');
+const { Client, Attachment } = require('discord.js');
+
 
 module.exports = {
     name: 'help',
@@ -18,6 +20,8 @@ module.exports = {
             return message.author.send(data, { split: true })
                 .then(() => {
                     if (message.channel.type === 'dm') return;
+                    const attachment = new Attachment('https://cdn.discordapp.com/attachments/334713917907402763/513752341359362049/tenor_6.gif');
+                    message.channel.send(attachment);
                     message.reply('te mandei uma DM com todos os meus comandos disponíveis! (: ');
                 })
                 .catch(error => {
@@ -39,7 +43,7 @@ module.exports = {
         if (command.description) data.push(`**Descrição:** ${command.description}`);
         if (command.usage) data.push(`**Uso:** ${prefix}${command.name} ${command.usage}`);
 
-        data.push(`**Tempo de espera:** ${command.cooldown || 3} second(s)`);
+        data.push(`**Tempo de espera:** ${command.cooldown || 3} segundo(s)`);
 
         message.channel.send(data, { split: true });
     },
