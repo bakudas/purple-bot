@@ -2,6 +2,8 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const { Client, Attachment } = require('discord.js');
+const fetch = require('node-fetch');
+const querystring = require('querystring');
 
 const client = new Discord.Client({autoReconnect:true});
 client.commands = new Discord.Collection();
@@ -17,7 +19,7 @@ client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
 
-client.on('message', message => {
+client.on('message', async message => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).split(/ +/);

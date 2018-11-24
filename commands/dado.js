@@ -15,7 +15,7 @@ module.exports = {
         if (!args.length) {
             return message.channel.send(`Você precisa dizer quantos lados o dado tem, ${message.author}!`);
         }
-        else if (args[0] === !null || !isNaN(args[0])) {
+        else if (args[0] === !null || !isNaN(args[0] || args[0] !== 0)) {
             let result = dice.roll();
             message.channel.send(`${message.author}:game_die:: ${result}`);
         }
@@ -25,7 +25,9 @@ module.exports = {
         else if (args[0] === !null) {
             message.channel.send(`${message.author} você precisa passar o númedo de lados do dado`);
         }
-    
+        else if (args[0] !== 0) {
+            message.channel.send(`${message.author} você precisa passar o númedo de lados do dado`);
+        }
         // message.channel.send(`rolou o dado com ${args[0]} lados`);
     },
 };
