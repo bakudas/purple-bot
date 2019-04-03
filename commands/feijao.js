@@ -4,7 +4,7 @@ module.exports = {
     name: 'feijao',
     description: 'não use esse comando',
     execute(message, args) {
-        const attachment = new Attachment('https://cdn.discordapp.com/attachments/334713917907402763/562696181403090947/SPOILER_feijao.png');
+        const attachment = new Attachment('https://cdn.discordapp.com/attachments/414057506646786058/562813987985817611/SPOILER_ulele2_1.gif');
         message.channel.send(attachment);
     },
 };
