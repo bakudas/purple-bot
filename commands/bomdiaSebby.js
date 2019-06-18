@@ -1,7 +1,7 @@
 const { Client, Attachment } = require('discord.js');
 
 module.exports = {
-    name: 'bomdiaSebby',
+    name: 'bomdiasebby',
     description: 'buon giorno',
     execute(message, args) {
         const attachment = new Attachment('https://cdn.discordapp.com/attachments/334713917907402763/590535883355324416/bomdiaSebby.mp3');
