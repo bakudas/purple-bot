@@ -1,6 +1,6 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const { prefix, token } = require('./config.json');
+const { prefix } = require('./config.json');
 const { Client, Attachment } = require('discord.js');
 const fetch = require('node-fetch');
 const querystring = require('querystring');
@@ -48,4 +48,4 @@ client.on('message', async message => {
 });
 
 // token login
-client.login(token);
+client.login(process.env.BOT_TOKEN);
