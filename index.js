@@ -4,7 +4,7 @@ const { prefix } = require('./config.json');
 const { Client, Attachment } = require('discord.js');
 const fetch = require('node-fetch');
 const querystring = require('querystring');
-
+const token = process.env.BOT_TOKEN;
 const client = new Discord.Client({autoReconnect:true});
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
@@ -48,4 +48,4 @@ client.on('message', async message => {
 });
 
 // token login
-client.login(process.env.BOT_TOKEN);
+client.login(token);
