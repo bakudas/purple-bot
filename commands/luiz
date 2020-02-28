@@ -1,0 +1,10 @@
+const { Client, Attachment } = require('discord.js');
+
+module.exports = {
+    name: 'efe',
+    description: 'contemplem o efe',
+    execute(message, args) {
+        const attachment = new Attachment('https://imgur.com/89DjrE2');
+        message.channel.send(attachment);
+    },
+};
